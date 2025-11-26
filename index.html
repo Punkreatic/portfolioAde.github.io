@@ -1,53 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Shader Background</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* чтобы не было скролла */
-            font-family: Arial;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мини-страница</title>
 
-        /* Фон — iframe с шейдером */
-        #shader-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            border: none;
-            z-index: -1; /* отправляем назад */
-        }
-
-        /* Контент поверх */
-        .content {
-            position: relative;
-            z-index: 10;
-            color: white;
-            text-align: center;
-            margin-top: 40vh;
-            font-size: 32px;
-            text-shadow: 0 0 10px black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <header>
+        <h1>Моя мини-страница</h1>
+    </header>
 
-    <!-- 🔥 Шейдер w3SSDh как фон -->
-    <iframe 
-        id="shader-bg"
-        src="https://www.shadertoy.com/embed/w3SSDh?gui=false&paused=false&muted=true"
-        allowfullscreen>
-    </iframe>
+    <main>
+        <p>Это пример простой страницы на HTML + CSS.</p>
 
-    <!-- Контент на странице -->
-    <div class="content">
-        Это текст поверх шейдера 🔥
-    </div>
+        <!-- 🔗 Вот ссылка -->
+        <a class="btn" href="https://example.com" target="_blank">
+            Перейти по ссылке
+        </a>
+    </main>
 
+    <footer>
+        <p>© 2025 Мой мини-сайт</p>
+    </footer>
 </body>
 </html>
