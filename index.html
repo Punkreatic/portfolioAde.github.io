@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Shader Background</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* чтобы не было скролла */
+            font-family: Arial;
+        }
+
+        /* Фон — iframe с шейдером */
+        #shader-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            z-index: -1; /* отправляем назад */
+        }
+
+        /* Контент поверх */
+        .content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            text-align: center;
+            margin-top: 40vh;
+            font-size: 32px;
+            text-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🔥 Шейдер w3SSDh как фон -->
+    <iframe 
+        id="shader-bg"
+        src="https://www.shadertoy.com/embed/w3SSDh?gui=false&paused=false&muted=true"
+        allowfullscreen>
+    </iframe>
+
+    <!-- Контент на странице -->
+    <div class="content">
+        Это текст поверх шейдера 🔥
+    </div>
+
+</body>
+</html>
